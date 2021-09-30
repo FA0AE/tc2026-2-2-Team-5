@@ -1,0 +1,20 @@
+{
+  "name": "tc2026-2-2-team-5",
+  "version": "1.0.0",
+  "description": "Repo for team #5 for the Web Apps development class. Members: Bruno Haesal &amp; Francisco Arenas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FA0AE/tc2026-2-2-Team-5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FA0AE/tc2026-2-2-Team-5/issues"
+  },
+  "homepage": "https://github.com/FA0AE/tc2026-2-2-Team-5#readme"
+}
