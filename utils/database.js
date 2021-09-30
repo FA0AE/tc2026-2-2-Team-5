@@ -2,7 +2,7 @@
 const Sequelize = require("sequelize")
 const {aplicarRelaciones} = require('./relations')
 //Nombre de la base, usuario, contraseña
-const sequelize = new Sequelize('base2','user1','root',{
+const sequelize = new Sequelize('baseBF_de_bruno_y_francisco','user1','root',{
     dialect: 'mysql', //3306 port
     host: '54.173.202.133',
     define:{
