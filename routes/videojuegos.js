@@ -14,4 +14,10 @@ router.get('/obtenerConsola',vjController.getObtenerConsola)
 router.post('/borrarConsola',vjController.postBorrarConsola)
 router.post('/actualizarConsola',vjController.postActualizarConsola)
 
+// Combo
+router.post('/agregarCCVJ',vjController.postAgregarComboConsolaVideojuego)
+router.get('/obtenerCCVJ',vjController.getObtenerComboConsolaVideojuego)
+router.post('/borrarCCVJ',vjController.postBorrarComboConsolaVideojuego)
+router.post('/actualizarCCVJ',vjController.postActualizarComboConsolaVideojuego)
+
 module.exports = router

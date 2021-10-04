@@ -121,3 +121,63 @@ exports.postActualizarConsola = (req,res)=>{
         res.json({estado: "error"})
     })
 }
+
+// Consola & Videojuego (Tabla intermedio)
+exports.postAgregarComboConsolaVideojuego = (req,res)=>{
+    console.log(req.body) //<={id: number,nombre:text}
+    Combo.create(req.body)
+        .then(vj=>{
+            console.log("Registro de Combo existoso")
+            res.json({estado: "aceptado"})
+        })
+        .catch(err=>{
+            console.log(err)
+            res.json({estado: "error"})
+        })
+    //res.redirect('/videojuegos/confirmacionDatos')
+}
+
+exports.getObtenerComboConsolaVideojuego = (req,res)=>{
+    Combo.findAll()
+        .then(combo =>{
+            console.log(combo)
+            res.json(combo)
+        })
+        .catch(err=>console.log(err))
+} 
+
+exports.postBorrarComboConsolaVideojuego = (req,res)=>{
+    console.log(req.body)
+    Combo.destroy({
+       where:{
+           idCV: req.body.id
+       } 
+    })
+    .then(() =>{
+        console.log("Combo eliminado")
+        res.json({estado: "aceptado"})
+    })
+    .catch(err=>{
+        console.log(err)
+        res.json({estado: "error"})
+    })
+}
+
+exports.postActualizarComboConsolaVideojuego = (req,res)=>{
+    console.log(req.body)
+    Combo.update({
+        lanzamiento:req.body.lanzamiento
+    },{
+      where:{
+          idCV: req.body.id
+      }  
+    })
+    .then(() =>{
+        console.log("Combo actualizado")
+        res.json({estado: "aceptado"})
+    })
+    .catch(err=>{
+        console.log(err)
+        res.json({estado: "error"})
+    })
+}
