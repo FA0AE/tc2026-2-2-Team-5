@@ -1,6 +1,7 @@
 const path = require('path')
 const Videojuego = require('../utils/database').models.videojuego
 const Consola = require('../utils/database').models.consola
+const Combo = require('../utils/database').models.consolaVideojuego
 
 // Videojuegos
 exports.postAgregarVideojuego = (req,res)=>{
