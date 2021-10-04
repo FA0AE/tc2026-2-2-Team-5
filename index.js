@@ -4,8 +4,9 @@ const sequelize = require('./utils/database');
 const app = express();
 
 app.use(express.urlencoded({extended:true}));
-app.use('/videojuegos',vjRoutes);
 app.use(express.json());
+app.use('/videojuegos',vjRoutes);
+
 
 sequelize.sync()
     .then(
